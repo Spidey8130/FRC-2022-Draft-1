@@ -2,8 +2,10 @@ package frc.robot;
 
 import org.photonvision.PhotonCamera;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class CargoVision extends TimedRobot {
     PhotonCamera camera = new PhotonCamera("photonvision");
@@ -20,5 +22,9 @@ public class CargoVision extends TimedRobot {
             rotationValue = -turnController.calculate(result.getBestTarget().getYaw(), 0);
         }
         return rotationValue;
+    }
+
+    public void getDriverView() {
+        camera.setDriverMode(true);
     }
 }

@@ -128,9 +128,21 @@ public class Drive {
         if(oi.limeLightTurn)         {
             if(oi.dropped){
                 differentialDrive.arcadeDrive(0, limeLight.PIDC());
+                if (limeLight.PIDC() == 0) {
+                    SmartDashboard.putBoolean("Shooter Aimed", true);
+                }
+                else {
+                    SmartDashboard.putBoolean("Shooter Aimed", false);
+                }
             }
             else if(oi.dropped == false){
-                //driveMecanum.driveCartesian(0, 0, limeLight.PIDC(), 0);
+                driveMecanum.driveCartesian(0, 0, limeLight.PIDC(), 0);
+                if (limeLight.PIDC() == 0) {
+                    SmartDashboard.putBoolean("Shooter Aimed", true);
+                }
+                else {
+                    SmartDashboard.putBoolean("Shooter Aimed", false);
+                }
             }
         }
         

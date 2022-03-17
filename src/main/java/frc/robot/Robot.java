@@ -72,6 +72,7 @@ public class Robot extends TimedRobot {
     drive.driveTeleop();
     intake.intakeTeleop();
     shooter.shooterTeleop();
+    cargoVision.getDriverView();
   }
 
   @Override
