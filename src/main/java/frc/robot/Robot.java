@@ -93,5 +93,8 @@ public class Robot extends TimedRobot {
   public void testInit() {}
 
   @Override
-  public void testPeriodic() {}
+  public void testPeriodic() {
+    SmartDashboard.putNumber("limelight distance by in", limelight.limeLightDistanceInches());
+    
+  }
 }

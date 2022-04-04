@@ -14,6 +14,9 @@ public class OI {
     double shootAutomatedSpeed = 0;
     double hoodAutomatedPos = 0;
     boolean shootNow = false;
+
+    double distanceFromLimelightToGoalInches;
+    double dx = distanceFromLimelightToGoalInches;
     
 
    

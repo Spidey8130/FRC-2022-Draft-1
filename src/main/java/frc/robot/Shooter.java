@@ -16,6 +16,8 @@ public class Shooter {
     private double percentOutput;
     private double LastOutput; 
     private double Kp;
+    private double shooterSpeed = -41.00625 * oi.dx - 10406.56305;
+    private double hoodValue = 19.63731 * oi.dx - 1787.57969;
 
     public Shooter(Intake in){
         shooterMotor = new TalonFX(Constants.shooterMotorPort);
@@ -77,7 +79,7 @@ public class Shooter {
 
     
        // if(oi.Xbox2.getRightBumper()){
-        shooterMotor.set(ControlMode.PercentOutput, -percentOutput);
+        shooterMotor.set(ControlMode.PercentOutput, shooterSpeed);
        // }
         // else{
         //     shooterMotor.set(ControlMode.PercentOutput, 0);

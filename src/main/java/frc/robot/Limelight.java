@@ -137,10 +137,10 @@ public class Limelight extends TimedRobot {
     double angleToGoalRadians = angleToGoalDegrees * (3.14159 / 180.0);
     
     //calculate distance
-    double distanceFromLimelightToGoalInches = (goalHeightInches - limelightLensHeightInches)/Math.tan(angleToGoalRadians);
-        SmartDashboard.putNumber("Distance To Goal", distanceFromLimelightToGoalInches);
+    oi.distanceFromLimelightToGoalInches = (goalHeightInches - limelightLensHeightInches)/Math.tan(angleToGoalRadians);
+        SmartDashboard.putNumber("Distance To Goal", oi.distanceFromLimelightToGoalInches);
        
-        return distanceFromLimelightToGoalInches;
+        return oi.distanceFromLimelightToGoalInches;
         // SmartDashboard.putNumber("test", ty.getDouble(0.0));
     }
     
