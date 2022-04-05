@@ -102,8 +102,8 @@ public class Shooter {
         }
         }
 
-    public void hoodMotorRunToPos(double targetPos){
-        hoodMotor.set(ControlMode.Position, targetPos);
+    public void hoodMotorRunToPos(){
+        hoodMotor.set(ControlMode.Position, hoodValue);
     }
 
     public double hoodEncoder(){
