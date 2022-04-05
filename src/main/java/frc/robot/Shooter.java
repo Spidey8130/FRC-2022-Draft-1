@@ -10,14 +10,16 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Shooter {
     OI oi = new OI();
+    Limelight limelight = new Limelight();
     Intake intake; 
     private TalonFX shooterMotor;
     private TalonSRX hoodMotor;
     private double percentOutput;
     private double LastOutput; 
     private double Kp;
-    private double shooterSpeed = -41.00625 * oi.dx - 10406.56305;
-    private double hoodValue = 19.63731 * oi.dx - 1787.57969;
+    double dx = limelight.distanceFromLimelightToGoalInches;
+    private double shooterSpeed =  -37.06963 * dx - 7361.12338;
+    private double hoodValue = 9.51786 * dx - 1253.00509;
 
     public Shooter(Intake in){
         shooterMotor = new TalonFX(Constants.shooterMotorPort);
@@ -85,8 +87,8 @@ public class Shooter {
         //     shooterMotor.set(ControlMode.PercentOutput, 0);
         // }
         // SmartDashboard.putNumber("difference", difference);
-        SmartDashboard.putNumber("FX speed", fxspd);
-        SmartDashboard.putNumber("oitargetSpeed", oi.targetSpeedManual());
+        // SmartDashboard.putNumber("FX speed", fxspd);
+        // SmartDashboard.putNumber("oitargetSpeed", oi.targetSpeedManual());
         // SmartDashboard.putNumber("percentOutput", percentOutput);
         // SmartDashboard.putNumber("error", error);
     }

@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class OI {
-    
+    Limelight limelight = new Limelight();
     
     //Xbox object
     XboxController Xbox1 = new XboxController(0);
@@ -15,8 +15,6 @@ public class OI {
     double hoodAutomatedPos = 0;
     boolean shootNow = false;
 
-    double distanceFromLimelightToGoalInches;
-    double dx = distanceFromLimelightToGoalInches;
     
 
    
