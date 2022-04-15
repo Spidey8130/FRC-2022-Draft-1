@@ -18,8 +18,8 @@ public class Shooter {
     private double LastOutput; 
     private double Kp;
     double dx = limelight.distanceFromLimelightToGoalInches;
-    private double shooterSpeed =  -37.06963 * dx - 7361.12338;
-    private double hoodValue = 9.51786 * dx - 1253.00509;
+    private double shooterSpeed =  -36.53475 * dx - 9878.861;
+    private double hoodValue = 8.91004 * dx - 523.44015;
 
     public Shooter(Intake in){
         shooterMotor = new TalonFX(Constants.shooterMotorPort);
